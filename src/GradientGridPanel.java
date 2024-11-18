@@ -83,7 +83,31 @@ public class GradientGridPanel extends JPanel
         boolean[] used = new boolean[GRID_SIZE * GRID_SIZE];
 
         //TODO: you write this method.
-        return false;
+
+        // loop through each value in loop
+        for (int row = 0; row < GRID_SIZE; row++) {
+            for (int col = 0; col < GRID_SIZE; col++) {
+                //myGrid is a 2d array with a singular value in each element
+
+                // upper row
+                if (row == 0) {
+
+                }
+                // left column
+                // right column
+                // bottom column
+                // make sure that each value is only used once
+                System.out.println(myGrid[row][col]);
+
+                // check no number used twice
+                if (used[myGrid[row][col]]) {
+                    return false;
+                }
+                else {
+                    used[myGrid[row][col]] = true;
+                }
+            }
+        }
     }
 
     /**
