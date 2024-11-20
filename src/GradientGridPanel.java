@@ -89,10 +89,13 @@ public class GradientGridPanel extends JPanel
             for (int col = 0; col < GRID_SIZE; col++) {
                 //myGrid is a 2d array with a singular value in each element
                 int value = myGrid[row][col];
+                value++;
 
                 // upper left corner
                 if (col == 0 && row == 0) {
-                    if (myGrid[0][1] == )
+                    if (myGrid[0][1] == value || myGrid[1][0] == value || myGrid[1][1] == value) {
+
+                    }
                 }
                 // upper right corner
                 // lower left corner
