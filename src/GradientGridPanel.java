@@ -92,19 +92,35 @@ public class GradientGridPanel extends JPanel
                 value++;
 
                 // upper left corner
-                if (col == 0 && row == 0) {
-                    if (myGrid[0][1] == value || myGrid[1][0] == value || myGrid[1][1] == value) {
-
-                    }
+                if ((col == 0 && row == 0) && !(myGrid[0][1] == value || myGrid[1][0] == value || myGrid[1][1] == value)) {
+                    return false;
                 }
                 // upper right corner
+                else if ((col == 0 && row == GRID_SIZE - 1) && !(myGrid[GRID_SIZE - 2][0] == value || myGrid[GRID_SIZE - 1][1] == value || myGrid[GRID_SIZE - 2][1] == value)) {
+                    return false;
+                }
                 // lower left corner
+                else if ((col == GRID_SIZE - 1 && row == 0) && !(myGrid[0][GRID_SIZE - 2] == value || myGrid[1][GRID_SIZE - 1] == value || myGrid[1][GRID_SIZE - 2] == value)) {
+                    return false;
+                }
                 // lower right corner
+                else if ((col == GRID_SIZE - 1 && row == GRID_SIZE - 1) && !(myGrid[GRID_SIZE - 2][GRID_SIZE - 1] == value || myGrid[GRID_SIZE - 1][GRID_SIZE - 2] == value || myGrid[GRID_SIZE - 2][GRID_SIZE - 2] == value)) {
+                    return false;
+                }
                 // upper row
+                else if (col == 0 && !(myGrid[row + 1][0] == value || myGrid[row - 1][0] == value || myGrid[row][1] == value || myGrid[row + 1][1] == value || myGrid[row - 1][1] == value)) {
+                    return false;
+                }
                 // left column
+                else if (row == 0 && !(myGrid[row][col + 1] == value || myGrid[row][col - 1] == value || myGrid[1][col - 1] == value || myGrid[1][col] == value || myGrid[1][col + 1] == value)) {
+                    return false;
+                }
                 // right column
+                else if (row == GRID_SIZE - 1 && !(myGrid[row][col + 1] == value || myGrid[row][col - 1] == value || myGrid[row - 1][col] == value || myGrid[row - 1][col - 1] == value || myGrid[row - 1][col + 1] == value)) {
+                    return false;
+                }
                 // bottom column
-
+                else if (row == GRID_SIZE - 1 && !(myGrid[row][col - 1] == value || myGrid[row + 1][col] == value || myGrid[row - 1][col] == value))
                 // make sure that each value is only used once
                 System.out.println(myGrid[row][col]);
 
