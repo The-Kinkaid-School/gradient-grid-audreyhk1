@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4a23e66c-010e-40e6-b64b-1f45d21b353d" name="Changes" comment="added one ting" />
+    <list default="true" id="4a23e66c-010e-40e6-b64b-1f45d21b353d" name="Changes" comment="changed the checker -- but there is an error - always false -- need to fix">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GradientGridPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GradientGridPanel.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -100,13 +103,22 @@
       <option name="project" value="LOCAL" />
       <updated>1732123514690</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="changed the checker -- but there is an error - always false -- need to fix">
+      <option name="closed" value="true" />
+      <created>1732901510081</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1732901510081</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="@ confirmGridMeetsSpecifications -- finished check no number used twice" />
     <MESSAGE value="make some progress" />
     <MESSAGE value="added one ting" />
-    <option name="LAST_COMMIT_MESSAGE" value="added one ting" />
+    <MESSAGE value="changed the checker -- but there is an error - always false -- need to fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed the checker -- but there is an error - always false -- need to fix" />
   </component>
 </project>

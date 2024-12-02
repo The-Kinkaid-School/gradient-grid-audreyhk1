@@ -90,7 +90,7 @@ public class GradientGridPanel extends JPanel
                 //myGrid is a 2d array with a singular value in each element
                 int value = myGrid[row][col];
                 value++;
-
+                System.out.println(STR."\{row}, \{col}");
                 // upper left corner
                 if ((col == 0 && row == 0) && !(myGrid[0][1] == value || myGrid[1][0] == value || myGrid[1][1] == value)) {
                     return false;
@@ -120,10 +120,9 @@ public class GradientGridPanel extends JPanel
                     return false;
                 }
                 // bottom column
-                else if (row == GRID_SIZE - 1 && !(myGrid[row][col - 1] == value || myGrid[row + 1][col] == value || myGrid[row - 1][col] == value))
-                // make sure that each value is only used once
-                System.out.println(myGrid[row][col]);
-
+                else if (col == GRID_SIZE - 1 && !(myGrid[row][col - 1] == value || myGrid[row + 1][col] == value || myGrid[row - 1][col] == value)) {
+                    return false;
+                }
                 // check no number used twice
                 if (used[myGrid[row][col]]) {
                     return false;
@@ -131,8 +130,18 @@ public class GradientGridPanel extends JPanel
                 else {
                     used[myGrid[row][col]] = true;
                 }
+
             }
+
         }
+//        for (boolean[] r: used) {
+//            for (Boolean v: r) {
+//                if (!v) {
+//                    return false;
+//                }
+//            }
+//        }
+        return true;
     }
 
     /**
