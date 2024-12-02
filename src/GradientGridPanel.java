@@ -89,53 +89,69 @@ public class GradientGridPanel extends JPanel
             for (int col = 0; col < GRID_SIZE; col++) {
                 //myGrid is a 2d array with a singular value in each element
                 int value = myGrid[row][col];
-                value++;
-                System.out.println(STR."\{row}, \{col}");
+                value--;
+                System.out.println(STR."Row: \{row}, Col: \{col}");
                 // upper left corner
-                if (col == 0 && row == 0) {
-                    if (!(myGrid[0][1] == value || myGrid[1][0] == value || myGrid[1][1] == value)) {
-                        return false;
-                    }
+//                if (col == 0 && row == 0) {
+//                    if (!(myGrid[0][1] == value || myGrid[1][0] == value || myGrid[1][1] == value)) {
+//                        System.out.println("A");
+//                        return false;
+//                    }
+//                }
+                if (myGrid[row][col] == 0) {
+                    continue;
                 }
                 // upper right corner
                 else if ((col == 0 && row == GRID_SIZE - 1)) {
                     if (!(myGrid[GRID_SIZE - 2][0] == value || myGrid[GRID_SIZE - 1][1] == value || myGrid[GRID_SIZE - 2][1] == value)) {
+                        System.out.println(myGrid[row][col]);
+                        System.out.println(value);
+                        System.out.println(myGrid[GRID_SIZE -2][0]);
+                        System.out.println(myGrid[GRID_SIZE - 1][1]);
+                        System.out.println(myGrid[GRID_SIZE - 2][1]);
+                        System.out.println("B");
                         return false;
                     }
                 }
                 // lower left corner
                 else if ((col == GRID_SIZE - 1 && row == 0)) {
                     if (!(myGrid[0][GRID_SIZE - 2] == value || myGrid[1][GRID_SIZE - 1] == value || myGrid[1][GRID_SIZE - 2] == value)) {
+                        System.out.println("C");
                         return false;
                     }
                 }
                 // lower right corner
                 else if ((col == GRID_SIZE - 1 && row == GRID_SIZE - 1)) {
                     if (!(myGrid[GRID_SIZE - 2][GRID_SIZE - 1] == value || myGrid[GRID_SIZE - 1][GRID_SIZE - 2] == value || myGrid[GRID_SIZE - 2][GRID_SIZE - 2] == value)) {
+                        System.out.println("D");
                         return false;
                     }
                 }
                 // upper row
                 else if (col == 0) {
                     if (!(myGrid[row + 1][0] == value || myGrid[row - 1][0] == value || myGrid[row][1] == value || myGrid[row + 1][1] == value || myGrid[row - 1][1] == value)) {
+                        System.out.println("E");
                         return false;
                     }
                 }
                 // left column
                 else if (row == 0) {
                     if (!(myGrid[row][col + 1] == value || myGrid[row][col - 1] == value || myGrid[1][col - 1] == value || myGrid[1][col] == value || myGrid[1][col + 1] == value)) {
-                        return false;
-                    }
-                }
-                // right column
-                else if (row == GRID_SIZE - 1) {
-                    if (!(myGrid[row][col + 1] == value || myGrid[row][col - 1] == value || myGrid[row - 1][col] == value || myGrid[row - 1][col - 1] == value || myGrid[row - 1][col + 1] == value)) {
+                        System.out.println("F");
                         return false;
                     }
                 }
                 // bottom column
+                else if (row == GRID_SIZE - 1) {
+                    if (!(myGrid[row][col + 1] == value || myGrid[row][col - 1] == value || myGrid[row - 1][col] == value || myGrid[row - 1][col - 1] == value || myGrid[row - 1][col + 1] == value)) {
+                        System.out.println("G");
+                        return false;
+                    }
+                }
+                // right column
                 else if (col == GRID_SIZE - 1) {
-                    if ( !(myGrid[row][col - 1] == value || myGrid[row + 1][col] == value || myGrid[row - 1][col] == value)) {
+                    if ( !(myGrid[row][col - 1] == value || myGrid[row + 1][col] == value || myGrid[row - 1][col] == value || myGrid[row + 1][col - 1] == value || myGrid[row - 1][col - 1] == value)) {
+                        System.out.println("H");
                         return false;
                     }
                 }
@@ -157,6 +173,7 @@ public class GradientGridPanel extends JPanel
 //                }
 //            }
 //        }
+        System.out.println("HERE");
         return true;
     }
 
