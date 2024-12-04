@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4a23e66c-010e-40e6-b64b-1f45d21b353d" name="Changes" comment="creating a gradient">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GradientGridPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GradientGridPanel.java" afterDir="false" />
-    </list>
+    <list default="true" id="4a23e66c-010e-40e6-b64b-1f45d21b353d" name="Changes" comment="skip every other line" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -143,7 +140,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733332194991</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="skip every other line">
+      <option name="closed" value="true" />
+      <created>1733333025602</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1733333025602</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -155,6 +160,7 @@
     <MESSAGE value="changed so hopefully fix the error that will allow for the tester to get through 0, 0" />
     <MESSAGE value="fixed errors!" />
     <MESSAGE value="creating a gradient" />
-    <option name="LAST_COMMIT_MESSAGE" value="creating a gradient" />
+    <MESSAGE value="skip every other line" />
+    <option name="LAST_COMMIT_MESSAGE" value="skip every other line" />
   </component>
 </project>

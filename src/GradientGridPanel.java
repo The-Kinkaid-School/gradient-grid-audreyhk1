@@ -259,9 +259,10 @@ public class GradientGridPanel extends JPanel
                 right = false;
             }
             else {
+                int backwardsCounter = 0;
                 for (int c=GRID_SIZE - 1; c>=0; c--) {
-                    myGrid[r][c] = counter + c;
-                    System.out.println(STR."r: \{r}, c: \{c}");
+                    myGrid[r][c] = counter + backwardsCounter;
+                    backwardsCounter++;
                 }
                 right = true;
                 counter += GRID_SIZE;
